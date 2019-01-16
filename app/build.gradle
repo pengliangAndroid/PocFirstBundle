@@ -3,6 +3,25 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion "28.0.2"
+
+    signingConfigs {
+        debug {
+            storeFile file(rootProject.rootDir.toString() + DEBUG_STOREFILE)
+            storePassword DEBUG_STOREPASSWORD
+            keyAlias DEBUG_KEYALIAS
+            keyPassword DEBUB_KEYPASSWORD
+        }
+
+        release {
+            storeFile file(rootProject.rootDir.toString() + RELEASE_STOREFILE)
+            storePassword RELEASE_STOREPASSWORD
+            keyAlias RELEASE_KEYALIAS
+            keyPassword RELEASE_KEYPASSWORD
+            v1SigningEnabled true
+            v2SigningEnabled Boolean.valueOf(V2_SIGNING)
+        }
+    }
+
     defaultConfig {
         applicationId "com.taobao.android.test"
         minSdkVersion 15
@@ -17,6 +36,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
 }
 
 dependencies {
@@ -28,3 +49,4 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 }
+

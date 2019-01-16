@@ -48,5 +48,7 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    compile('com.taobao.android.test:PPFirstBundle:1.0-SNAPSHOT')
 }
 

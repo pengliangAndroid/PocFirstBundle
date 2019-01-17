@@ -178,7 +178,7 @@ dependencies {
 
 
 group = MAVEN_BASE_GROUP
-version = android.defaultConfig.versionName
+version = android.defaultConfig.versionName + "-SNAPSHOT"
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 publishing {

@@ -6,6 +6,6 @@ package test.android.taobao.com.firstlib;
 public class TestUtil {
 
     public static String getData(){
-        return "TestData";
+        return "UpdateTestData";
     }
 }
